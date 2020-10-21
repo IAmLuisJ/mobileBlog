@@ -1,0 +1,17 @@
+import React from "react";
+
+const BlogContext = React.createContext();
+
+const blogPosts = [
+  { title: "Blog post #1" },
+  { title: "Blog post #2" },
+  { title: "Blog post #3" },
+];
+
+export const BlogProvider = ({ children }) => {
+  return (
+    <BlogContext.Provider value={blogPosts}>{children}</BlogContext.Provider>
+  );
+};
+
+export default BlogContext;
