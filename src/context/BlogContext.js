@@ -3,14 +3,14 @@ import createDataContext from "./createDataContext";
 const blogReducer = (state, action) => {
   switch (action.type) {
     case "CREATE": {
-      return [...state, { title: `Blog Post #${blogPosts.length + 1}` }];
+      return [...state, { title: `Blog Post #${state.length + 1}` }];
     }
     default:
       return state;
   }
 };
 
-const addBlogPosts = (dispatch) => {
+const addBlogPost = (dispatch) => {
   return () => {
     dispatch({ type: "CREATE" });
   };
@@ -18,6 +18,6 @@ const addBlogPosts = (dispatch) => {
 
 export const { Context, Provider } = createDataContext(
   blogReducer,
-  { addBlogPosts },
+  { addBlogPost },
   []
 );
