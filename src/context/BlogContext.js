@@ -5,7 +5,11 @@ const blogReducer = (state, action) => {
     case "CREATE": {
       return [
         ...state,
-        { id: Math.random() * 99999, title: `Blog Post #${state.length + 1}` },
+        {
+          id: Math.random() * 99999,
+          title: action.payload.title,
+          content: action.payload.content,
+        },
       ];
     }
     case "DELETE": {
@@ -17,8 +21,8 @@ const blogReducer = (state, action) => {
 };
 
 const addBlogPost = (dispatch) => {
-  return () => {
-    dispatch({ type: "CREATE" });
+  return (title, content) => {
+    dispatch({ type: "CREATE", payload: { title: title, content: content } });
   };
 };
 
