@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     borderColor: "gray",
   },
   title: {
-    fontSize: 18,
+    fontSize: 17,
   },
   icon: {
     fontSize: 24,
