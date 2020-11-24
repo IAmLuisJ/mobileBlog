@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
   icon: {
-    fontSize: 24,
+    fontSize: 25,
   },
   headerIcon: {
     margin: 10,
