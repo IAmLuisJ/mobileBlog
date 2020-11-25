@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   headerIcon: {
-    margin: 10,
+    margin: 12,
   },
 });
 
