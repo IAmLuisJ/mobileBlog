@@ -27,7 +27,7 @@ ShowScreen.navigationOptions = ({ navigation }) => {
           navigation.navigate("Edit", { id: navigation.getParam("id") })
         }
       >
-        <Feather name="edit" size={35} />
+        <Feather name="edit" size={38} />
       </TouchableOpacity>
     ),
   };
